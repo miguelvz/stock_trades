@@ -44,7 +44,7 @@ Esta es una guía para desplegar la API y consumirla localmente. La implementaci
 
    `REGION_NAME=us-east-1`
 
-6. Ya con esto se puede ejecutar localmente la aplicación mediante el comando
+6. Con esto se puede ejecutar localmente la aplicación mediante el comando
 
    `uvicorn main:app --reload --env-file=".env"`
 
