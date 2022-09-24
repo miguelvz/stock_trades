@@ -127,6 +127,9 @@ def get_prices(symbol, start, end, interval, username):
 
 
 def get_stocks_csv(username):
+    """
+    username: (usuario logueado) (p.ej) 'miguelvalzul'
+    """
     response = stocks_table.scan()
     result = response["Items"]
 

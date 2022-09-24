@@ -6,6 +6,3 @@ from routes.user import routes_user
 app = FastAPI()
 app.include_router(routes_user)
 create_tables()
-
-
-

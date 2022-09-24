@@ -20,9 +20,5 @@ class Symbols(BaseModel):
 class User(BaseModel):
     username: str
     password: str
-    # email: str | None = None
-    # full_name: str | None = None
-    # disabled: bool | None = None
-    # created_at: str = Field(default_factory=generate_date) 
 
     

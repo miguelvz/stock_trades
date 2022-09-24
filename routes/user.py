@@ -13,6 +13,11 @@ today = date.today()
 yesterday = today - timedelta(days=1)
 
 
+@routes_user.get("/")
+def home():
+    return{ "message": "Welcome to the ultimate stocks API!" }
+
+
 # Registrar usuario
 @routes_user.post("/register", status_code=201)
 def register(user: User):
@@ -23,6 +28,7 @@ def register(user: User):
         'password': 'clavesecreta'
     }
     """
+    # Siempre se debe guardar el hash de la clave, no la clave en texto plano
     hashed_password = auth_handler.get_password_hash(user.password)
     return add_user( {"username": user.username, "password": hashed_password} )
 
@@ -57,7 +63,7 @@ def get_all_symbols(username=Depends(auth_handler.auth_wrapper)):
 
 
 # User story 2
-@routes_user.post("/save-symbols", response_model=Symbols)
+@routes_user.post("/save/symbols", response_model=Symbols)
 def add(symbols: Symbols, username=Depends(auth_handler.auth_wrapper)):
     return add_symbols(symbols.dict(), username)
 

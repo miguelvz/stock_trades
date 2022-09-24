@@ -60,23 +60,16 @@ tables = [
                 "AttributeName": "username",
                 "KeyType": "HASH"
             },
-            # {
-            #     "AttributeName": "created_at",
-            #     "KeyType": "RANGE"
-            # }
         ],
         "AttributeDefinitions": [
             {
                 "AttributeName": "username",
                 "AttributeType": "S"
-            },
-            # {
-            #     "AttributeName": "created_at",
-            #     "AttributeType": "S"
-            # }        
+            },   
         ]
     }
 ]
+
 
 def create_tables():
     try:
