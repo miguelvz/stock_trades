@@ -8,7 +8,7 @@ Esta es una guía para desplegar la API y consumirla localmente. La implementaci
 
     `git clone https://github.com/miguelvz/stock_trades.git`
 
-2. Se recomienda crear un entorno virtual. Para esto, en Windows, desde la terminal ejecute el comando
+2. Se recomienda crear un entorno virtual. Para esto, en Windows, desde la terminal párese en la carpeta del repositorio y ejecute el comando
     
     `py -3 -m venv venv`
 
